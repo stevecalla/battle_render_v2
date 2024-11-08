@@ -1,0 +1,591 @@
+{
+    "characters": [
+      {
+        "name": "Goku",
+        "anime": "Dragon Ball Z",
+        "stats": {
+          "health_points": 10000,
+          "attack": 9000,
+          "defense": 8500,
+          "speed": 7500,
+          "mana": 2000,
+          "plot_armor": 10
+        },
+        "abilities": [
+          {
+            "name": "Kamehameha",
+            "description": "A powerful energy blast",
+            "damage": 1200,
+            "cooldown": 2
+          },
+          {
+            "name": "Instant Transmission",
+            "description": "Teleports instantly",
+            "effect": "Avoids next attack",
+            "cooldown": 3
+          }
+        ]
+      },
+      {
+        "name": "Naruto Uzumaki",
+        "anime": "Naruto",
+        "stats": {
+          "health_points": 8500,
+          "attack": 7500,
+          "defense": 7200,
+          "speed": 6500,
+          "mana": 3000,
+          "plot_armor": 9
+        },
+        "abilities": [
+          {
+            "name": "Rasengan",
+            "description": "A swirling sphere of chakra",
+            "damage": 900,
+            "cooldown": 2
+          },
+          {
+            "name": "Shadow Clone Jutsu",
+            "description": "Creates shadow clones",
+            "effect": "Increases chance to dodge",
+            "cooldown": 3
+          }
+        ]
+      },
+      {
+        "name": "Luffy",
+        "anime": "One Piece",
+        "stats": {
+          "health_points": 8000,
+          "attack": 7000,
+          "defense": 6500,
+          "speed": 7500,
+          "mana": 0,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Gomu Gomu no Pistol",
+            "description": "Stretchy punch",
+            "damage": 600,
+            "cooldown": 1
+          },
+          {
+            "name": "Gear Fourth",
+            "description": "Transforms into a stronger form",
+            "effect": "Doubles attack temporarily",
+            "cooldown": 5
+          }
+        ]
+      },
+      {
+        "name": "Saitama",
+        "anime": "One Punch Man",
+        "stats": {
+          "health_points": 9999,
+          "attack": 9999,
+          "defense": 9999,
+          "speed": 9999,
+          "mana": 0,
+          "plot_armor": 10
+        },
+        "abilities": [
+          {
+            "name": "Serious Punch",
+            "description": "An overwhelmingly powerful punch",
+            "damage": 9999,
+            "cooldown": 1
+          }
+        ]
+      },
+    
+      {
+        "name": "Ichigo Kurosaki",
+        "anime": "Bleach",
+        "stats": {
+          "health_points": 8200,
+          "attack": 7700,
+          "defense": 6800,
+          "speed": 7200,
+          "mana": 3500,
+          "plot_armor": 9
+        },
+        "abilities": [
+          {
+            "name": "Getsuga Tensho",
+            "description": "Releases a blast of energy from his sword",
+            "damage": 1000,
+            "cooldown": 2
+          },
+          {
+            "name": "Bankai: Tensa Zangetsu",
+            "description": "Transforms into a faster, more powerful form",
+            "effect": "Doubles speed temporarily",
+            "cooldown": 5
+          }
+        ]
+      },
+      {
+        "name": "Eren Yeager",
+        "anime": "Attack on Titan",
+        "stats": {
+          "health_points": 7500,
+          "attack": 7000,
+          "defense": 6000,
+          "speed": 5500,
+          "mana": 0,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Titan Transformation",
+            "description": "Transforms into the Attack Titan",
+            "effect": "Increases attack and defense",
+            "cooldown": 5
+          },
+          {
+            "name": "Regeneration",
+            "description": "Heals quickly in Titan form",
+            "effect": "Regenerates health",
+            "cooldown": 3
+          }
+        ]
+      },
+      {
+        "name": "Edward Elric",
+        "anime": "Fullmetal Alchemist",
+        "stats": {
+          "health_points": 6800,
+          "attack": 6400,
+          "defense": 5900,
+          "speed": 6100,
+          "mana": 3000,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Alchemy",
+            "description": "Transforms materials into various shapes",
+            "effect": "Deals damage or creates defenses",
+            "cooldown": 1
+          },
+          {
+            "name": "Automail Arm",
+            "description": "Metal arm enhances physical attacks",
+            "damage": 600,
+            "cooldown": 0
+          }
+        ]
+      },
+      {
+        "name": "Gon Freecss",
+        "anime": "Hunter x Hunter",
+        "stats": {
+          "health_points": 6700,
+          "attack": 6400,
+          "defense": 5500,
+          "speed": 6300,
+          "mana": 2500,
+          "plot_armor": 7
+        },
+        "abilities": [
+          {
+            "name": "Jajanken",
+            "description": "Powerful rock-paper-scissors style attack",
+            "damage": 1000,
+            "cooldown": 3
+          },
+          {
+            "name": "Enhanced Senses",
+            "description": "Improves battle awareness",
+            "effect": "Increases dodge rate",
+            "cooldown": 1
+          }
+        ]
+      },
+      {
+        "name": "Yusuke Urameshi",
+        "anime": "Yu Yu Hakusho",
+        "stats": {
+          "health_points": 7500,
+          "attack": 6800,
+          "defense": 6200,
+          "speed": 7000,
+          "mana": 2800,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Spirit Gun",
+            "description": "Shoots a concentrated blast of spirit energy",
+            "damage": 900,
+            "cooldown": 2
+          },
+          {
+            "name": "Demon Form",
+            "description": "Temporarily enhances power and speed",
+            "effect": "Boosts attack and speed",
+            "cooldown": 5
+          }
+        ]
+      },
+      {
+        "name": "Sasuke Uchiha",
+        "anime": "Naruto",
+        "stats": {
+          "health_points": 8200,
+          "attack": 7500,
+          "defense": 6900,
+          "speed": 7200,
+          "mana": 3000,
+          "plot_armor": 9
+        },
+        "abilities": [
+          {
+            "name": "Chidori",
+            "description": "A high-speed thrust attack charged with electricity",
+            "damage": 1200,
+            "cooldown": 2
+          },
+          {
+            "name": "Sharingan",
+            "description": "Gains heightened reflexes and awareness",
+            "effect": "Increases dodge rate and counter ability",
+            "cooldown": 1
+          }
+        ]
+      },
+      {
+        "name": "Levi Ackerman",
+        "anime": "Attack on Titan",
+        "stats": {
+          "health_points": 7000,
+          "attack": 6800,
+          "defense": 6600,
+          "speed": 7500,
+          "mana": 0,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Blade Storm",
+            "description": "Unleashes a flurry of attacks with dual blades",
+            "damage": 1000,
+            "cooldown": 2
+          },
+          {
+            "name": "Enhanced Agility",
+            "description": "Quick and agile movements",
+            "effect": "Increases dodge rate",
+            "cooldown": 1
+          }
+        ]
+      },
+      {
+        "name": "Natsu Dragneel",
+        "anime": "Fairy Tail",
+        "stats": {
+          "health_points": 8000,
+          "attack": 7800,
+          "defense": 6900,
+          "speed": 7100,
+          "mana": 3500,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Fire Dragon's Roar",
+            "description": "Breathes a powerful flame attack",
+            "damage": 1100,
+            "cooldown": 2
+          },
+          {
+            "name": "Dragon Slayer Mode",
+            "description": "Increases strength and fire resistance",
+            "effect": "Boosts attack and defense",
+            "cooldown": 4
+          }
+        ]
+      },
+      {
+        "name": "Jotaro Kujo",
+        "anime": "JoJo's Bizarre Adventure",
+        "stats": {
+          "health_points": 7500,
+          "attack": 7800,
+          "defense": 7400,
+          "speed": 7200,
+          "mana": 0,
+          "plot_armor": 9
+        },
+        "abilities": [
+          {
+            "name": "Star Platinum",
+            "description": "Stand that unleashes rapid, powerful punches",
+            "damage": 1000,
+            "cooldown": 1
+          },
+          {
+            "name": "Time Stop",
+            "description": "Stops time briefly",
+            "effect": "Allows free attacks for a moment",
+            "cooldown": 5
+          }
+        ]
+      },
+      {
+        "name": "Light Yagami",
+        "anime": "Death Note",
+        "stats": {
+          "health_points": 4000,
+          "attack": 3000,
+          "defense": 2000,
+          "speed": 2500,
+          "mana": 0,
+          "plot_armor": 7
+        },
+        "abilities": [
+          {
+            "name": "Death Note",
+            "description": "Eliminates anyone whose name is written in it",
+            "effect": "Instant defeat (requires time to prepare)",
+            "cooldown": 6
+          }
+        ]
+      },
+      {
+        "name": "Killua Zoldyck",
+        "anime": "Hunter x Hunter",
+        "stats": {
+          "health_points": 6500,
+          "attack": 6200,
+          "defense": 6000,
+          "speed": 8000,
+          "mana": 2500,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Godspeed",
+            "description": "Increases speed and reflexes to extreme levels",
+            "effect": "Boosts speed temporarily",
+            "cooldown": 5
+          },
+          {
+            "name": "Thunderbolt",
+            "description": "Electrifies his body to shock enemies",
+            "damage": 700,
+            "cooldown": 2
+          }
+        ]
+      },
+      {
+        "name": "Saber",
+        "anime": "Fate/stay night",
+        "stats": {
+          "health_points": 7500,
+          "attack": 7800,
+          "defense": 7300,
+          "speed": 7000,
+          "mana": 4000,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Excalibur",
+            "description": "Releases a powerful energy blast from the sword",
+            "damage": 1500,
+            "cooldown": 3
+          },
+          {
+            "name": "Instinct",
+            "description": "Heightens senses to avoid danger",
+            "effect": "Increases dodge rate",
+            "cooldown": 1
+          }
+        ]
+      },
+      {
+        "name": "Gintoki Sakata",
+        "anime": "Gintama",
+        "stats": {
+          "health_points": 7000,
+          "attack": 6500,
+          "defense": 6800,
+          "speed": 7000,
+          "mana": 0,
+          "plot_armor": 9
+        },
+        "abilities": [
+          {
+            "name": "Lake Toya Sword Style",
+            "description": "Powerful sword attacks with wooden sword",
+            "damage": 800,
+            "cooldown": 1
+          },
+          {
+            "name": "Parody Power",
+            "description": "Uses comedic elements to avoid danger",
+            "effect": "Avoids damage temporarily",
+            "cooldown": 3
+          }
+        ]
+      },
+      {
+        "name": "Meliodas",
+        "anime": "The Seven Deadly Sins",
+        "stats": {
+          "health_points": 8500,
+          "attack": 8000,
+          "defense": 7800,
+          "speed": 7200,
+          "mana": 3500,
+          "plot_armor": 9
+        },
+        "abilities": [
+          {
+            "name": "Full Counter",
+            "description": "Reflects magic attacks back at the enemy",
+            "effect": "Reflects damage",
+            "cooldown": 2
+          },
+          {
+            "name": "Demon Form",
+            "description": "Transforms, boosting attack and defense",
+            "effect": "Increases attack and defense",
+            "cooldown": 5
+          }
+        ]
+      },
+      {
+        "name": "Kenshin Himura",
+        "anime": "Rurouni Kenshin",
+        "stats": {
+          "health_points": 6900,
+          "attack": 6700,
+          "defense": 6400,
+          "speed": 7400,
+          "mana": 0,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Hiten Mitsurugi Ryu",
+            "description": "Swift and powerful sword style",
+            "damage": 1000,
+            "cooldown": 2
+          },
+          {
+            "name": "Amakakeru Ryu no Hirameki",
+            "description": "Ultimate attack with immense speed",
+            "damage": 1500,
+            "cooldown": 4
+          }
+        ]
+      },
+      {
+        "name": "Tanjiro Kamado",
+        "anime": "Demon Slayer",
+        "stats": {
+          "health_points": 6800,
+          "attack": 6600,
+          "defense": 6300,
+          "speed": 7200,
+          "mana": 1000,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Water Breathing",
+            "description": "Sword technique using water-based forms",
+            "damage": 900,
+            "cooldown": 1
+          },
+          {
+            "name": "Hinokami Kagura",
+            "description": "Flame technique passed down from his father",
+            "damage": 1200,
+            "cooldown": 3
+          }
+        ]
+      },
+      {
+        "name": "Shoto Todoroki",
+        "anime": "My Hero Academia",
+        "stats": {
+          "health_points": 7100,
+          "attack": 7000,
+          "defense": 6700,
+          "speed": 6500,
+          "mana": 3000,
+          "plot_armor": 8
+        },
+        "abilities": [
+          {
+            "name": "Half-Cold Half-Hot",
+            "description": "Uses ice and fire in combat",
+            "effect": "Deals ice or fire damage",
+            "cooldown": 1
+          },
+          {
+            "name": "Flashfire Fist",
+            "description": "Unleashes intense flames from his left side",
+            "damage": 1000,
+            "cooldown": 2
+          }
+        ]
+      },
+      {
+        "name": "Alucard",
+        "anime": "Hellsing",
+        "stats": {
+          "health_points": 9999,
+          "attack": 9500,
+          "defense": 9000,
+          "speed": 7000,
+          "mana": 0,
+          "plot_armor": 10
+        },
+        "abilities": [
+          {
+            "name": "Regeneration",
+            "description": "Quickly heals from any wound",
+            "effect": "Regenerates health",
+            "cooldown": 1
+          },
+          {
+            "name": "Release Restriction Level Zero",
+            "description": "Unleashes full power",
+            "effect": "Greatly increases attack power",
+            "cooldown": 5
+          }
+        ]
+      },
+      {
+        "name": "Spike Spiegel",
+        "anime": "Cowboy Bebop",
+        "stats": {
+          "health_points": 6200,
+          "attack": 6500,
+          "defense": 6000,
+          "speed": 6700,
+          "mana": 0,
+          "plot_armor": 7
+        },
+        "abilities": [
+          {
+            "name": "Martial Arts",
+            "description": "Highly skilled in hand-to-hand combat",
+            "damage": 700,
+            "cooldown": 1
+          },
+          {
+            "name": "Sharp Shooting",
+            "description": "Exceptional accuracy with firearms",
+            "damage": 800,
+            "cooldown": 1
+            }
+        ]
+        }
+    ]
+}
