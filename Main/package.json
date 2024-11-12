@@ -11,7 +11,10 @@
       "install": "cd server && npm i && cd ../client && npm i",
       "client:build": "cd client && npm run build",
       "client:dev": "cd client && npm run dev",
-      "build": "cd client && npm run build"
+      "build": "cd client && npm run build",
+      "test-db": "npm run setup-db && npm run seeds-db",
+      "setup-db": "psql -U postgres -f ./server/db/schema.sql",
+      "seeds-db": "node ./server/db/seed.js"
     },
     "keywords": [],
     "author": "",
