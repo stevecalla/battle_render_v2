@@ -4,7 +4,7 @@ const Dashboard = () => {
             <div>
                 <h1>Battle Dash</h1>
                 <div>
-                    <h3>Welcome {user.userName}</h3>
+                    <h3>Welcome {/*user.userName */}</h3>
                     <section>
                         <p>Wins:</p>
                         <p>Losses:</p>

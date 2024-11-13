@@ -1,4 +1,4 @@
-import Team from '../components/Team';
+import Team from '../components/team';
 
 const TeamsRoom = () => {
     return (
