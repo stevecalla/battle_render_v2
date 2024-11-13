@@ -1,4 +1,4 @@
-import Battle from '../components/Battle';
+import Battle from '../components/battle';
 
 const BattleRoom = () => {
     return (
