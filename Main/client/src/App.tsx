@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -32,4 +32,24 @@ function App() {
   )
 }
 
+export default <App></App>*/
+
+import { Outlet } from "react-router-dom"
+
+import Navbar from "./components/navbar"
+import Footer from "./components/footer"
+
+function App() {
+  return (
+    <>
+      <Navbar />
+        <main>
+          <Outlet />
+        </main>
+      <Footer />
+    </>
+  )
+}
+
 export default App
+
