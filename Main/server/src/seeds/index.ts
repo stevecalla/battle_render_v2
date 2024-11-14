@@ -1,5 +1,7 @@
 import sequelize from "../config/connection.js";
 import { seedChars } from "./charSeeds.js";
+import { seedUsers } from "./userSeeds.js";
+import { seedTeams } from "./teamSeeds.js";
 
 const seedAll = async () => {
     try {
@@ -8,6 +10,12 @@ const seedAll = async () => {
         
         await seedChars();
         console.log('\n----- CHARACTERS SEEDED -----\n');
+
+        await seedUsers();
+        console.log('\n----- USERS SEEDED -----\n');
+   
+        await seedTeams();
+        console.log('\n----- TEAMS SEEDED -----\n');
         
         process.exit(0);
       } catch (error) {

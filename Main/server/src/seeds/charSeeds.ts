@@ -1,7 +1,7 @@
-import { character } from '../models/index.js';
+import { Character } from '../models/index.js';
 
 export const seedChars = async () => { 
-    await character.bulkCreate([
+    await Character.bulkCreate([
                 {
                   name: 'Goku',
                   anime: 'Dragon Ball Z',
