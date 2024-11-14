@@ -16,8 +16,8 @@ export class Teams extends Model<TeamAttributes, TeamCreationAttributes>
     public id!: number;
     public name!: string;
 
-    // Add the addCharacters method
     public addCharacters!: (characters: Character[]) => Promise<void>;
+    public removeCharacter!: (characters: Character) => Promise<void>; // singular
 }
 
 // Factory function for initializing the Teams model

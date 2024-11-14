@@ -32,7 +32,7 @@ const TeamCharacters = TeamCharactersFactory(sequelize);
 Team.belongsToMany(Character, { through: TeamCharacters });
 Character.belongsToMany(Team, { through: TeamCharacters });
 
-Team.hasMany(TeamCharacters, { foreignKey: 'teamId' });
+//Team.hasMany(TeamCharacters, { foreignKey: 'teamId' });
 Character.hasMany(TeamCharacters, { foreignKey: 'characterId' });
 
 export { sequelize, Character, User, Team, TeamCharacters };
