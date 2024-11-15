@@ -1,7 +1,6 @@
+
 import { Router } from 'express';
-// import characterRouter from './characters';
-// import userRouter from './users';
-
+import { teamRouter } from './team-Routes.js';
 const router = Router();
-
-export default router;
+router.use('/team', teamRouter);
+export { router as apiRoutes };
