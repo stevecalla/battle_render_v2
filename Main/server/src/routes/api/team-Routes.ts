@@ -14,7 +14,7 @@ router.post('/', async (req: Request, res: Response) => {
     }
 });
 
-router.delete('/', async (req: Request, res: Response) => {
+router.delete('/:teamId', async (req: Request, res: Response) => {
     try {
         const team = await Team.findByPk(req.body.teamId);
         if (!team) {
@@ -35,7 +35,6 @@ router.post('/:teamId/characters', async (req: Request, res: Response) => {
     try {
         // Find team by ID
         const team = await Team.findByPk(req.params.teamId);
-
 
         if (!team) {
             return res.status(404).json({ message: 'Team not found' });
