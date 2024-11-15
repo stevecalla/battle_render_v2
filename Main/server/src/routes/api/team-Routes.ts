@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import type { Request, Response } from 'express';
-import { Team } from '../../models/index.js';
+import { Team, Character } from '../../models/index.js';
 const router = Router();
 
 router.post('/', async (req: Request, res: Response) => {
@@ -13,7 +13,8 @@ router.post('/', async (req: Request, res: Response) => {
         res.status(400).json(err);
     }
 });
-router.post('/', async (req: Request, res: Response) => {
+
+router.delete('/', async (req: Request, res: Response) => {
     try {
         const team = await Team.findByPk(req.body.teamId);
         if (!team) {
@@ -27,5 +28,39 @@ router.post('/', async (req: Request, res: Response) => {
         res.status(400).json(err);
     }
 });
+
+
+
+router.post('/:teamId/characters', async (req: Request, res: Response) => {
+    try {
+        // Find team by ID
+        const team = await Team.findByPk(req.params.teamId);
+
+
+        if (!team) {
+            return res.status(404).json({ message: 'Team not found' });
+        }
+   
+        // Find character by ID
+        const character = await Character.findByPk(req.body.characterId);
+   
+        if (!character) {
+            return res.status(404).json({ message: 'Character not found' });
+        }
+   
+        // Add character to team
+        await team.addCharacters(character); // `addCharacter` if singular in your relationship
+   
+        console.log(`Successfully added character with ID ${character.id} to the team.`);
+        return res.status(201).json({ message: 'Character added to team successfully', team });
+    } catch (err) {
+        if (err instanceof Error) {
+            return res.status(400).json({ error: err.message });
+        } else {
+            return res.status(400).json({ error: 'An unknown error occurred' });
+        }
+    }
+});
+
 
 export { router as teamRouter };

@@ -11,26 +11,32 @@ export const seedTeams = async () => {
   await addCharacterToTeam(exampleTeam.id, 10);
 
   await addCharacterToTeam(exampleTeam2.id, 2);
-}
 
+  await addCharacterToTeam(exampleTeam2.id, 12);
+}
+// testing
 export const addCharacterToTeam = async (teamId: number, characterId: number) => {
-    // Find the team by its ID
+    // find team by id
     const team = await Team.findByPk(teamId);
 
     if (!team) {
       throw new Error('Team not found');
     }
 
-    const characters = await Character.findAll({
+    const characters = await Character.findOne({
       where: {
         id: characterId, // find char by id
       },
     });
 
-    // add char to team
-    await team.addCharacters(characters); // The method `addCharacters` comes from the many-to-many relationship
+    if (!characters) {
+      throw new Error('Character not found');
+    }
 
-    console.log(`Successfully added ${characters.length} characters to the team.`);
+    // add char to team
+    await team.addCharacters(characters); // method `addCharacters` comes from the many-to-many relationship
+
+    console.log(`Successfully added ${characters} characters to the team.`);
 };
 
 export const removeCharacterFromTeam = async (teamId: number, characterId: number) => {
@@ -47,8 +53,26 @@ export const removeCharacterFromTeam = async (teamId: number, characterId: numbe
     throw new Error('Character not found');
   }
 
-  // Remove the character from the team
-  await team.removeCharacter(character); // The method `removeCharacter` comes from the many-to-many relationship
+  // remove char from team
+  await team.removeCharacter(character); // method `removeCharacter` comes from the many-to-many relationship
 
   console.log(`Successfully removed character with ID ${characterId} from the team.`);
+};
+
+export const deleteTeam = async (teamId: number) => {
+  try {
+    const team = await Team.findByPk(teamId);
+
+    if (!team) {
+      throw new Error('Team not found');
+    }
+
+    // delete team
+    await team.destroy();
+
+    console.log(`Successfully deleted team with ID ${teamId}.`);
+  } catch (error) {
+    console.error(`Error deleting team with ID ${teamId}:`, error);
+    throw error;
+  }
 };
