@@ -7,6 +7,7 @@ router.post('/', async (req: Request, res: Response) => {
     try {
         const team = await Team.create({
         name: req.body.name,
+        
         });
         res.status(201).json(team);
     } catch (err) {
@@ -16,7 +17,7 @@ router.post('/', async (req: Request, res: Response) => {
 
 router.delete('/:teamId', async (req: Request, res: Response) => {
     try {
-        const team = await Team.findByPk(req.body.teamId);
+        const team = await Team.findByPk(req.params.teamId);
         if (!team) {
           throw new Error('Team not found');
         }
@@ -61,5 +62,25 @@ router.post('/:teamId/characters', async (req: Request, res: Response) => {
     }
 });
 
+router.get('/', async (_req: Request, res: Response) => {
+    try {
+        const teams = await Team.findAll();
+        return res.status(200).json(teams);
+    } catch (err) {
+        return res.status(400).json(err);
+    }
+});
+
+router.get('/:teamId', async (req: Request, res: Response) => {
+    try {
+        const team = await Team.findByPk(req.params.teamId);
+        if (!team) {
+            return res.status(404).json({ message: 'Team not found' });
+        }
+        return res.status(200).json(team);
+    } catch (err) {
+        return res.status(400).json(err);
+    }
+});
 
 export { router as teamRouter };
