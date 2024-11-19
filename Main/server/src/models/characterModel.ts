@@ -1,5 +1,4 @@
 import { DataTypes, Sequelize, Model, Optional } from 'sequelize';
-//import { Teams } from './teamModel.js'; // Import the Teams model
 
 // Define the attributes interface
 interface CharacterAttributes {
