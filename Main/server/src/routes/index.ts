@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { securityRoutes } from  "./security";
-import { apiRoutes } from "./api";
+import { securityRoutes } from  "./security.js";
+import { apiRoutes } from "./api/index.js";
 
 
 

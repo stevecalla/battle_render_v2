@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
-import { sequelize } from './index';
-import { Users } from './userModel';
+import { sequelize } from './index.js';
+import { Users } from './userModel.js';
 
 export class PasswordChange extends Model {
   public id!: number;
