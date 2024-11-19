@@ -1,42 +1,337 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+}
+
+#navBar {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid black;
+
+  background-color: yellow;
+}
+
+#navTitle {
+  width: 50%;
+  Margin-left: 30px;
+  white-space: nowrap;
+  color: white;
+  text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+}
+
+#navList {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+/***************************************************/
+/*-------------------Dashboard---------------------*/
+/***************************************************/
+#battleDash {
+  position: relative;
+  z-index: 2;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+#dashImage {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/collision.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+#dashUser {
+  padding: 10px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  width: 60%;
   margin: 0 auto;
-  padding: 2rem;
+  border: solid white;
+}
+
+#dashUser a {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#dashTitle {
+  text-align: center;
+  color: rgb(74, 74, 255);
+  text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black, 5px 5px 10px white, 5px -5px 10px white, -5px 5px 10px white, -5px -5px 10px white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#dashWelcomeMsg {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#dashStats {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
 }
 
-.card {
-  padding: 2em;
+#dashHiTitle {
+  color: white;
+  text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+/***************************************************/
+/*-------------------Teams Room--------------------*/
+/***************************************************/
+#teamsRoom {
+  position: relative;
+  z-index: 2;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+#teamsImage {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/lockerRoom.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+#teamsRoomTitle {
+  color: rgb(74, 74, 255);
+  text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black, 5px 5px 10px white, 5px -5px 10px white, -5px 5px 10px white, -5px -5px 10px white;
+}
+
+.teamDisplayStats {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  background-color: black;
+  opacity: 0.8;
+  border: white solid;
+  padding: 20px;
+}
+
+.teamStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.characterDisplayStats {
+  color: white;
+  flex: 0 0 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.characterNameStatsContainer, .characterStats {
+  display: flex;
+  flex-direction: row;
+}
+
+.characterStats {
+  justify-content: center;
+}
+
+.characterColumn1, .characterColumn2 {
+  flex: 0 0 50%;
+}
+
+
+/***************************************************/
+/*------------------Battle Room--------------------*/
+/***************************************************/
+#battleRoom {
+  position: relative;
+  z-index: 2;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+#battleImage {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, blue, red);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+#battleRoomTitle {
+  color: rgb(74, 74, 255);
+  text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black, 5px 5px 10px white, 5px -5px 10px white, -5px 5px 10px white, -5px -5px 10px white;
+  margin: 0;
+}
+
+#battleTitle {
+  text-align: center;
+  color: white;
+  /*text-decoration: underline;*/
+  background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  padding-bottom: 10px;
+}
+
+#battleDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#battleVSContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#battleVS {
+  color: red;
+  font-style: italic;
+  text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+}
+
+.teamDisplayNoStats {
+  width: 60%;
+}
+
+.teamNameNoStats {
+  color: black;
+  text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+}
+
+.characterDisplayNoStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.characterNameNoStats {
+  color: white;
+  text-align: center;
+}
+
+/***************************************************/
+/*---------------------Login-----------------------*/
+/***************************************************/
+
+#loginImage {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/gears.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+#loginRoom {
+  position: relative;
+  z-index: 2;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+#loginTitle {
+  text-align: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/***************************************************/
+/*--------------------Sign Up----------------------*/
+/***************************************************/
+#signUpImage {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/gears2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+#signUpRoom {
+  position: relative;
+  z-index: 2;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+#signUpTitle {
+  text-align: center;
+  color: white;
+}
+
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#signUpForm label {
+  color: white;
+}
+
+/***************************************************/
+/*---------------------Footer----------------------*/
+/***************************************************/
+#footer {
+  position: sticky;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: solid black;
+
+  background-color: grey;
+}
+
+#footer a {
+  color: white;
 }
