@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS characters_db;
 
 CREATE DATABASE "characters_db";
 
-\c characters_db;
+/*\c characters_db;
 
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
@@ -19,7 +19,9 @@ CREATE TABLE IF NOT EXISTS character (
     health INT,
     attack INT,
     defense INT,
-    speed INT
+    speed INT,
+    mana INT,
+    plot_armor INT
 );
 
 CREATE TABLE IF NOT EXISTS team (
@@ -31,4 +33,4 @@ CREATE TABLE IF NOT EXISTS team_character (
     team_id INT REFERENCES team(id) ON DELETE CASCADE,
     character_id INT REFERENCES character(id) ON DELETE CASCADE,
     PRIMARY KEY (team_id, character_id)
-);
+);*/
