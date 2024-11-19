@@ -57,8 +57,7 @@ export function UserFactory(sequelize: Sequelize): typeof Users {
     {
       tableName: 'users',
       sequelize,
-    }
-  );
+    });
 
   return Users;
 }

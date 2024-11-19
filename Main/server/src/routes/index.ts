@@ -3,6 +3,7 @@ import { securityRoutes } from  "./security";
 import { apiRoutes } from "./api";
 
 
+
 const router = Router();
 
 router.use('/auth', securityRoutes);
