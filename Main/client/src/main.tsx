@@ -1,25 +1,13 @@
-/*import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)*/
-
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
-
-import App from './App.tsx';
-import BattleRoom from './pages/BattleRoom.tsx';
+import ReactDOM from 'react-dom/client';  // Make sure you're importing from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App';  // Adjust according to your file structure
+import ErrorPage from './pages/ErrorPage.tsx';
 import Dashboard from './pages/Dashboard.tsx';
 import Login from './pages/Login.tsx';
 import TeamsRoom from './pages/TeamsRoom.tsx';
+import BattleRoom from './pages/BattleRoom.tsx';
 import SignUp from './pages/SignUp.tsx';
-import ErrorPage from './pages/ErrorPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +18,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Dashboard />
-      }, 
+      },
       {
         path: '/login',
         element: <Login />
@@ -52,9 +40,9 @@ const router = createBrowserRouter([
 ]);
 
 const rootElement = document.getElementById('root');
-if(rootElement) {
-  ReactDOM.createRoot(rootElement).render(
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
     <RouterProvider router={router} />
   );
 }
-
