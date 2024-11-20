@@ -1,5 +1,5 @@
 //import { where } from 'sequelize';
-import { Team, Character, User } from '../models/index.js';
+import { Team, Character } from '../models/index.js';
 
 // testing
 export const seedTeams = async () => {
