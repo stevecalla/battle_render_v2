@@ -1,9 +1,32 @@
-import { Team, Character } from '../models/index.js';
+//import { where } from 'sequelize';
+import { Team, Character, User } from '../models/index.js';
 
 // testing
 export const seedTeams = async () => {
-  const exampleTeam = await Team.create({ name: 'Team 1' });
-  const exampleTeam2 = await Team.create({ name: 'Team 2' });
+  /*const exampleUser1 = await User.findOne({ where: { id: 1 } });
+  const exampleUser2 = await User.findOne({ where: { id: 2 } });
+
+
+  if (!exampleUser1 || !exampleUser2) {
+    throw new Error('User not found');
+  }
+
+  const exampleTeam = await Team.create({
+    name: 'Team 1',
+    userId: exampleUser1.id // Associate the team with the user
+  });
+
+    const exampleTeam2 = await Team.create({
+    name: 'Team 2',
+    userId: exampleUser2.id // Associate the team with the user
+  });
+
+  const exampleTeam3 = await Team.create({
+    name: 'Team 2',
+    userId: exampleUser1.id // Associate the team with the user
+  });
+
+  await addCharacterToTeam(exampleTeam3.id, 5);
 
   await addCharacterToTeam(exampleTeam.id, 1);
   await addCharacterToTeam(exampleTeam.id, 4);
@@ -12,7 +35,7 @@ export const seedTeams = async () => {
 
   await addCharacterToTeam(exampleTeam2.id, 2);
 
-  await addCharacterToTeam(exampleTeam2.id, 12);
+  await addCharacterToTeam(exampleTeam2.id, 12);*/
 }
 // testing
 export const addCharacterToTeam = async (teamId: number, characterId: number) => {

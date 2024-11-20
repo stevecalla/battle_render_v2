@@ -3,11 +3,13 @@ import type { Request, Response } from 'express';
 import { Team, Character } from '../../models/index.js';
 const router = Router();
 
+
+// create team with name and userId
 router.post('/', async (req: Request, res: Response) => {
     try {
         const team = await Team.create({
         name: req.body.name,
-        
+        userId: req.body.userId
         });
         res.status(201).json(team);
     } catch (err) {
@@ -15,6 +17,8 @@ router.post('/', async (req: Request, res: Response) => {
     }
 });
 
+
+// delete team by ID
 router.delete('/:teamId', async (req: Request, res: Response) => {
     try {
         const team = await Team.findByPk(req.params.teamId);
@@ -31,7 +35,7 @@ router.delete('/:teamId', async (req: Request, res: Response) => {
 });
 
 
-
+// add character to team
 router.post('/:teamId/characters', async (req: Request, res: Response) => {
     try {
         // Find team by ID
@@ -62,15 +66,25 @@ router.post('/:teamId/characters', async (req: Request, res: Response) => {
     }
 });
 
-router.get('/', async (_req: Request, res: Response) => {
+
+// get all teams or get teams associated to userId
+router.get('/?userId', async (req: Request, res: Response) => {
     try {
-        const teams = await Team.findAll();
-        return res.status(200).json(teams);
+        if (!req.params.userId) {
+            const teams = await Team.findAll();
+            return res.status(200).json(teams);
+        }
+        else {
+            const userTeams = await Team.findAll({where: {userId: req.params.userId}});
+            return res.status(200).json(userTeams);
+        }
     } catch (err) {
         return res.status(400).json(err);
     }
 });
 
+
+// get team by ID
 router.get('/:teamId', async (req: Request, res: Response) => {
     try {
         const team = await Team.findByPk(req.params.teamId);

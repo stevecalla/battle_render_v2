@@ -4,6 +4,7 @@ import type { Request, Response } from 'express';
 
 const router = Router();
 
+// get image data by ID
 router.get('/:id', async (req: Request, res: Response) => {
     try {
         const response = await axios.get(`https://api.jikan.moe/v4/characters/${req.params.id}/pictures`);

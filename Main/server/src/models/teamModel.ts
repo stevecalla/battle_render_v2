@@ -4,6 +4,7 @@ import { Character } from './characterModel.js'; // Import the Character model
 // Define the attributes interface
 interface TeamAttributes {
     id: number;
+    userId: number;
     name: string;
 }
 
@@ -14,6 +15,7 @@ interface TeamCreationAttributes extends Optional<TeamAttributes, 'id'> {}
 export class Teams extends Model<TeamAttributes, TeamCreationAttributes> 
     implements TeamAttributes {
     public id!: number;
+    public userId!: number;
     public name!: string;
 
     public addCharacters!: (characters: Character) => Promise<void>;
@@ -28,6 +30,10 @@ export function TeamFactory(sequelize: Sequelize): typeof Teams {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
+        },
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
         },
         name: {
             type: DataTypes.STRING,

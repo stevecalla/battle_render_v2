@@ -5,6 +5,7 @@ import type { Character as CharacterInstance } from '../../models/characterModel
 
 const router = Router();
 
+// get characters on a team
 const getTeamCharacters = async (teamId: string) => {
     return await Character.findAll({
         include: [
@@ -17,6 +18,8 @@ const getTeamCharacters = async (teamId: string) => {
     });
 };
 
+
+// simulate battle between two teams
 const simulateBattle = async (team1: CharacterInstance[], team2: CharacterInstance[], team1Points: number, team2Points: number) => {
     const minLength = Math.min(team1.length, team2.length);
 
@@ -39,6 +42,7 @@ const simulateBattle = async (team1: CharacterInstance[], team2: CharacterInstan
     return { team1Points, team2Points }; // return points for both teams
 };
 
+// POST /battling - Simulate a battle between two teams
 router.post('/battling', async (req: Request, res: Response) => {
     try {
         const { team1Id, team2Id } = req.body;

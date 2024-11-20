@@ -15,4 +15,7 @@ Character.belongsToMany(Team, { through: TeamCharacters });
 
 Character.hasMany(TeamCharacters, { foreignKey: 'characterId' });
 
+Team.belongsTo(User, { foreignKey: 'userId' }); // Team has a userId foreign key
+User.hasMany(Team, { foreignKey: 'userId' }); // User can have many teams
+
 export { sequelize, Character, User, Team, TeamCharacters };

@@ -6,6 +6,7 @@ import { PasswordChange } from '../../models/passwordChange.js';
 
 const router = Router();
 
+// POST / - Create a new user
 router.post('/', async (req: Request, res: Response) => {
     try {
       const newUser = req.body;
@@ -19,6 +20,8 @@ router.post('/', async (req: Request, res: Response) => {
     }
 });
 
+
+// PUT /change-password - Change user password
 router.put('/change-password', async (req: Request, res: Response) => {
     try {
       const { userId, password } = req.body;
