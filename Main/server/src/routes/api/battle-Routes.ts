@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import type { Request, Response } from 'express';
-import { Team, Character } from '../../models/index.js';
+import { Team, Character, User } from '../../models/index.js';
 import type { Character as CharacterInstance } from '../../models/characterModel.js'; // import the type "Character"
 
 const router = Router();
@@ -31,15 +31,14 @@ const simulateBattle = async (team1: CharacterInstance[], team2: CharacterInstan
         }
     }
 
+    let result = 'tie';
     if (team1Points > team2Points) {
-        console.log('Team 1 wins!');
+        result = 'win';
     } else if (team1Points < team2Points) {
-        console.log('Team 2 wins!');
-    } else {
-        console.log('It\'s a tie!');
+        result = 'loss';
     }
 
-    return { team1Points, team2Points }; // return points for both teams
+    return { result, team1Points, team2Points }; // return points for both teams
 };
 
 // POST /battling - Simulate a battle between two teams
@@ -62,7 +61,24 @@ router.post('/battling', async (req: Request, res: Response) => {
         let t1points = 0; // initialize points for team 1
         let t2points = 0; // initialize points for team 2
 
-        const { team1Points, team2Points } = await simulateBattle(team1characters, team2characters, t1points, t2points);
+        const { result, team1Points, team2Points } = await simulateBattle(team1characters, team2characters, t1points, t2points);
+
+        const team1User = await User.findOne({ where: { id: team1Id.userId } });
+        const team2User = await User.findOne({ where: { id: team2Id.userId } });
+
+        if (team1User && team2User) {
+            // Update the win/loss/tie records based on the result
+            if (result === 'win') {
+                await team1User.update({ win: team1User.win + 1 });
+                await team2User.update({ loss: team2User.loss + 1 });
+            } else if (result === 'loss') {
+                await team1User.update({ loss: team1User.loss + 1 });
+                await team2User.update({ win: team2User.win + 1 });
+            } else {
+                await team1User.update({ tie: team1User.tie + 1 });
+                await team2User.update({ tie: team2User.tie + 1 });
+            }
+        }
 
         // return points for both teams, send back to client
         return res.status(200).json({
