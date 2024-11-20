@@ -2,6 +2,7 @@ import Team from '../components/team';
 import { TeamData } from '../interfaces/TeamData';
 
 const myTeam:TeamData = {
+    id: 1,
     name: "Team Name",
     characters: [
         {name: "Character1", health: 100, attack: 10, defense: 5, speed: 5},

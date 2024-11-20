@@ -31,6 +31,9 @@ const signUp = () => {
         },
         body: JSON.stringify({
             username: username.value,
+            win: 0,
+            loss: 0,
+            tie: 0,
             password: password.value
         })
     }).then(response => {

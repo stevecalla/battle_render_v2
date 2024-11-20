@@ -36,6 +36,10 @@ const pullEnemyTeams = async () => {
 
 const pullMyTeam = async () => {
     const token = localStorage.getItem('LOGIN_TOKEN');
+
+    if (!token) {
+        throw new Error('No login token found');
+    }
     const payload = JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString());
     const userId = payload.id;
 
