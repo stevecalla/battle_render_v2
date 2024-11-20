@@ -24,7 +24,7 @@ const TeamsRoom = () => {
         <div id="teamsPage">
             <div id="teamsImage"></div>
             <div id="teamsRoom">
-                <h1 id="teamsRoomTitle">Teams Room</h1>
+                <h1 id="teamsRoomTitle">Locker Room</h1>
                 <div id="teamsRoomDisplay">
                     <Team teamDisplay={1} team={myTeam} teamNames={teamNames} align="left"/>
                 </div>
