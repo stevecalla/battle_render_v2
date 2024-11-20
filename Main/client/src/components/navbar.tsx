@@ -8,7 +8,7 @@ const NavBar = (props:any) => {
             <h2 id="navTitle" className="navTitle">Shonen Showdown</h2>
             <ul id="navList" className="navList">
                 <li id="navDash" className="navDash"><a href="/">Battle Dash</a></li>
-                {loginToken && <li id="navTeams" className="navTeams"><a href="/teamsRoom">Teams Room</a></li>}
+                {loginToken && <li id="navTeams" className="navTeams"><a href="/teamsRoom">Locker Room</a></li>}
                 {loginToken && <li id="navBattle" className="navBattle"><a href="/battleRoom">Battle Room</a></li>}
                 {loginToken ? 
                 (<li id="navLogOut" className="navLogOut"><a href="/login" onClick={() => {

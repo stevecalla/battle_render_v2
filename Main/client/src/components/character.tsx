@@ -10,7 +10,7 @@ const Character = (props:CharacterProps) => {
         return (
             <div className="characterDisplayStats">
                 <form className="characterNameStatsContainer">
-                    <label htmlFor='deleteCharacter' className="characterNameStats">Name: {props.character.name}</label>
+                    <label htmlFor='deleteCharacter' className="characterNameStats">{props.character.name}</label>
                     <input type="button" name="deleteCharacter" value="Delete" className="deleteCharacter"/>
                 </form>
                 <div className="characterStats">
@@ -28,7 +28,7 @@ const Character = (props:CharacterProps) => {
     } else {
         return (
             <div className="characterDisplayNoStats">
-                <h5 className="characterNameNoStats">Name: {props.character.name}</h5>
+                <h5 className="characterNameNoStats">{props.character.name}</h5>
             </div>
         )
     }
